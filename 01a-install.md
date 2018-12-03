@@ -1,3 +1,4 @@
+
 # Install software on your computer
 
 
@@ -47,7 +48,7 @@ import sklearn
 
 Did you install Python 2 or 3? Why?  
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> Python 3, it looks like Python 3 is more widely used now.
 
 ### Q2. Which Python Version Installed   
 
@@ -55,8 +56,5 @@ In the Terminal:
 
 `python3 --version`
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
-
- 
-
+>> My terminal outputs Python 3.6.3 :: Anaconda custom (64-bit)
 
