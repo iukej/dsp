@@ -1,0 +1,7 @@
+
+echo "Welcome, Ankur"
+
+alias pd="pwd"
+alias hy="history"
+alias ll="ls -la"
+

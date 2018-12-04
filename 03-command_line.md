@@ -20,8 +20,17 @@ Here's a list of items with which you should be familiar:
 
 Make a cheat sheet for yourself: a list of at least **ten** commands and what they do.  (Use the 8 items above and add a couple of your own.)  
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
-
+>> pwd = show current working directory path
+>> mkdir = make new directory
+>> rm -r = delete directory
+>> touch = create new file
+>> rm = delete a file
+>> mv = can be used to rename a file
+>> ls -a = shows hidden file
+>> cp = copy a file from one directory to another
+>> grep = search for a regex
+>> uniq = remove adjacent duplicates
+>> cat = output contents of a file
 ---
 
 ### Q2.  List Files in Unix   
@@ -35,7 +44,14 @@ What do the following commands do:
 `ls -t`  
 `ls -Glp`  
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+>> 'ls' lists the non-hidden files in current directory
+>> 'ls-a' lists the hidden and non-hidden files in current directory
+>> 'ls -l' lists non-hidden files in current directory in long form
+>> 'ls -lh' lists non-hidden files in current directory in long form with file size
+>> 'ls -lah' lists hidden and  non-hidden files in current directory in long form with file size
+>> 'ls -t' lists non-hidden files in current directory by when last modified
+>> 'ls -Glp' list non-hidden files in a long form, ungrouped and with directories seperated by slashes
+
 
 ---
 
@@ -43,15 +59,20 @@ What do the following commands do:
 
 Explore these other [ls options](http://www.techonthenet.com/unix/basic/ls.php) and pick 5 of your favorites:
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+>> -R = Display subdirectories as well
+>> -c = Display files by file timestamp
+>> -d = Display only directories
+>> -t = Display newest files first
+>> -u = Display files by file access time
 
+ 
 ---
 
 ### Q4.  Xargs   
 
 What does `xargs` do? Give an example of how to use it.
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+>> xargs executes lists of arguments piece by piece, to a given command, so they can be processed by the command line without error.
 
- 
-
+>> $ xargs find -name
+>> $ "*.txt"
