@@ -84,25 +84,25 @@ def CohenEffectSize(group1, group2):
     d = diff / math.sqrt(pooled_var)
     return d
 
-d = -0.089
+>>d = -0.089
 
 
 You will see effect size again and again in results of algorithms that are run in data science.  For instance, in the bootcamp, when you run a regression analysis, you will recognize the t-statistic as an example of effect size.
 
 ### Q2. [Think Stats Chapter 3 Exercise 1](statistics/3-1-actual_biased.md) (actual vs. biased)
-This problem presents a robust example of actual vs biased data.  As a data scientist, it will be important to examine not only the data that is available, but also the data that may be missing but highly relevant.  You will see how the absence of this relevant data will bias a dataset, its distribution, and ultimately, its statistical interpretation.
+>>This problem presents a robust example of actual vs biased data.  As a data scientist, it will be important to examine not only the data that is available, but also the data that may be missing but highly relevant.  You will see how the absence of this relevant data will bias a dataset, its distribution, and ultimately, its statistical interpretation.
 
 We see that the actual mean number of children less than 18 in a household is 1.024, but asking children under 18 this same questions yields a mean 2.404.
 
 ### Q3. [Think Stats Chapter 4 Exercise 2](statistics/4-2-random_dist.md) (random distribution)  
 This questions asks you to examine the function that produces random numbers.  Is it really random?  A good way to test that is to examine the pmf and cdf of the list of random numbers and visualize the distribution.  If you're not sure what pmf is, read more about it in Chapter 3.  
 
-Given the 1000 trials, it doesn't look as if it is completely random. If the procedure was really completely random, the distribution would be completely flat - although this may be due to not having more trials.
+>>Given the 1000 trials, it doesn't look as if it is completely random. If the procedure was really completely random, the distribution would be completely flat - although this may be due to not having more trials.
 
 ### Q4. [Think Stats Chapter 5 Exercise 1](statistics/5-1-blue_men.md) (normal distribution of blue men)
 This is a classic example of hypothesis testing using the normal distribution.  The effect size used here is the Z-statistic. 
 
-The CDF values at the ends of the ranges are 0.49 and 0.83, so we can say that the middle is the population of people that qualify for the Blue Man Group. This is 34 percent of the population.
+>>The CDF values at the ends of the ranges are 0.49 and 0.83, so we can say that the middle is the population of people that qualify for the Blue Man Group. This is 34 percent of the population.
 
 
 ### Q5. Bayesian (Elvis Presley twin) 
