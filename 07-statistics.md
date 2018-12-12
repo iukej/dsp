@@ -66,18 +66,43 @@ $ git clone https://github.com/AllenDowney/ThinkStats2.git
 
 ### Q1. [Think Stats Chapter 2 Exercise 4](statistics/2-4-cohens_d.md) (effect size of Cohen's d)  
 Cohen's D is an example of effect size.  Other examples of effect size are:  correlation between two variables, mean difference, regression coefficients and standardized test statistics such as: t, Z, F, etc. In this example, you will compute Cohen's D to quantify (or measure) the difference between two groups of data.   
+def CohenEffectSize(group1, group2):
+    """Compute Cohen's d.
+
+    group1: Series or NumPy array
+    group2: Series or NumPy array
+
+    returns: float
+    """
+    diff = group1.mean() - group2.mean()
+
+    n1, n2 = len(group1), len(group2)
+    var1 = group1.var()
+    var2 = group2.var()
+
+    pooled_var = (n1 * var1 + n2 * var2) / (n1 + n2)
+    d = diff / math.sqrt(pooled_var)
+    return d
+
+d = -0.089
+
 
 You will see effect size again and again in results of algorithms that are run in data science.  For instance, in the bootcamp, when you run a regression analysis, you will recognize the t-statistic as an example of effect size.
 
 ### Q2. [Think Stats Chapter 3 Exercise 1](statistics/3-1-actual_biased.md) (actual vs. biased)
 This problem presents a robust example of actual vs biased data.  As a data scientist, it will be important to examine not only the data that is available, but also the data that may be missing but highly relevant.  You will see how the absence of this relevant data will bias a dataset, its distribution, and ultimately, its statistical interpretation.
 
+We see that the actual mean number of children less than 18 in a household is 1.024, but asking children under 18 this same questions yields a mean 2.404.
+
 ### Q3. [Think Stats Chapter 4 Exercise 2](statistics/4-2-random_dist.md) (random distribution)  
 This questions asks you to examine the function that produces random numbers.  Is it really random?  A good way to test that is to examine the pmf and cdf of the list of random numbers and visualize the distribution.  If you're not sure what pmf is, read more about it in Chapter 3.  
+
+Given the 1000 trials, it doesn't look as if it is completely random. If the procedure was really completely random, the distribution would be completely flat - although this may be due to not having more trials.
 
 ### Q4. [Think Stats Chapter 5 Exercise 1](statistics/5-1-blue_men.md) (normal distribution of blue men)
 This is a classic example of hypothesis testing using the normal distribution.  The effect size used here is the Z-statistic. 
 
+The CDF values at the ends of the ranges are 0.49 and 0.83, so we can say that the middle is the population of people that qualify for the Blue Man Group. This is 34 percent of the population.
 
 
 ### Q5. Bayesian (Elvis Presley twin) 
@@ -86,14 +111,14 @@ Bayes' Theorem is an important tool in understanding what we really know, given 
 
 Elvis Presley had a twin brother who died at birth.  What is the probability that Elvis was an identical twin? Assume we observe the following probabilities in the population: fraternal twin is 1/125 and identical twin is 1/300.  
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
-
+>> Because this is a conditional probability, our universe (denominator) is the probability of being a boy-boy twin. Only half of the identical twins will be boy-boy, so that probability is 1/600. A quarter of fraternal twins will be boy-boy, that probability is 1/500. Adding these together, the probability of the universe (denominator) is .0036666. The probability of being one of the male identical twins is still half of the 1/300, so 1/600. (1/600)/(.003666) = .454545, or 5/11.
+   
 ---
 
 ### Q6. Bayesian &amp; Frequentist Comparison  
 How do frequentist and Bayesian statistics compare?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> Frequentist Statistics rely more strongly on testing, and validating a hypothesis based on the rejection of a null hypothesis. It is considered more of a "pure math" approach. Bayesian Statistics seek to apply more domain knowledge, scaling the resulting probability by a "prior probability" that we assume. 
 
 ---
 
